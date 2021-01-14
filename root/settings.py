@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # 3rd party
+    'rest_framework',
+
     # Local
     'todos.apps.TodosConfig',
 ]
@@ -57,6 +60,12 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'root.urls'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
 
 TEMPLATES = [
     {
